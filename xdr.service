@@ -1,0 +1,12 @@
+[Unit]
+Description=PaloAlto XDR Log collector
+After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/opt/paloalto_xdr
+ExecStart=/usr/bin/python3 /opt/paloalto_xdr/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
