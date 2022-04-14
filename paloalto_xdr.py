@@ -49,6 +49,7 @@ def test_advanced_authentication(api_key_id, api_key):
     # Calculate sha256:
     api_key_hash = hashlib.sha256(auth_key).hexdigest()
     # Generate HTTP call headers
+
     headers = {
         "x-xdr-timestamp": str(timestamp),
         "x-xdr-nonce": nonce,
